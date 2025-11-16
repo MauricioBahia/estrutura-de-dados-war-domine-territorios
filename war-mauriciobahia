@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <string.h>
+
+// Definição da estrutura Território
+typedef struct {
+    nome de caractere[30]; //Nome do território
+    char cor[10]; //Cor do exército
+    tropas internas; // Quantidade de tropas
+Território;
+
+int main() {
+    // Vetor para armazenar os 5 territórios
+    Território territórios[5];
+
+    // Laço para cadastro dos 5 territórios
+    para (int i = 0; i < 5; i++) {
+        // Solicitar nome do território
+        printf("Dígito do nome do território %d: ", i + 1);
+        fgets(territórios[i].nome, sizeof(territórios[i].nome), stdin);
+        //Remove a quebra de linha do nome
+        territórios[i].nome[strcspn(territórios[i].nome, "\n")] = '\0';
+        
+        // Solicitar cor do exército
+        printf("Digite o cor do exército do território %d: ", i + 1);
+        fgets(territórios[i].
